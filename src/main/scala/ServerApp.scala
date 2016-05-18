@@ -42,7 +42,7 @@ object ServerApp extends App {
     val actor = CreateServer.createServerActorWithEngine(
       sc,
       engineInstance,
-      engine.asInstanceOf[Engine[_,_,_,_,_,_]],
+      engine.asInstanceOf[Engine[_, _, _, _, _, _]],
       engineLanguage,
       manifest
     )
@@ -52,6 +52,8 @@ object ServerApp extends App {
     val settings = ServerSettings(actorSystem)
 
     IO(Http)(actorSystem) ! Http.Bind(listener = actor, interface = sc.ip, port = sc.port)
+
+    actorSystem.awaitTermination()
   }
 
 }
