@@ -1,0 +1,23 @@
+{
+  "name": "pio-engine-heroku",
+  "description": "Heroku compatible PredictionIO Engine",
+  "keywords": [
+    "machinelearning",
+    "predictionio"
+  ],
+  "repository": "https://github.com/jamesward/pio-engine-heroku",
+  "env": {
+    "ACCESS_KEY": {
+      "description": "PredictionIO Event Server App Access Key"
+    },
+    "APP_NAME": {
+      "description": "PredictionIO Event Server App Name"
+    },
+    "EVENT_SERVER_IP": {
+      "description": "PredictionIO Event Server Name"
+    },
+    "EVENT_SERVER_PORT": {
+      "description": "PredictionIO Event Server Port"
+    }
+  }
+}
