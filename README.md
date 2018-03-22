@@ -33,6 +33,10 @@ Run Locally:
 Run on Heroku:
 
 1. Deploy: [![Deploy on Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+1. Remove the auto-added Heroku Postgres addon:
+
+        heroku addons:destroy heroku-postgresql
+
 1. Attach your PredictionIO Event Server's Postgres:
 
         heroku addons:attach YOUR-ADDON-ID
